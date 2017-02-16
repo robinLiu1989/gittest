@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .search_box {
+            border: 3px solid #ffc281;
+            padding: 15px 20px;
+        }
+        .search_pop_box {
+            width: 662px;
+            position: absolute;
+            background-color: #fff;
+            z-index: 10001;
+            display: none;
+        }
+        .search_pop_box .search_box {
+            border: 2px solid #f80;
+        }
+        .search_box .sb_tt {
+            color: #f80;
+            border-bottom: 1px dotted #d8d8d8;
+            padding: 0 0 10px 0;
+            font-size: 16px;
+        }
+        .search_pop_box .closeSenSearch {
+            float: right;
+            cursor: pointer;
+            color: #666;
+        }
+        .tn_fontface {
+            font-family: 'tn_fontface';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .search_adv_item dl {
+            position: relative;
+            z-index: 1;
+            float: left;
+            padding: 6px 0 3px;
+        }
+        .search_adv_item dt {
+            float: left;
+            width: 70px;
+            height: 24px;
+            padding: 5px 0 6px 0px;
+            line-height: 24px;
+            text-align: left;
+            color: #333;
+            font-weight: bold;
+        }
+        .search_pop_box .search_adv_item dd {
+            width: 540px;
+        }
+        .search_box .pkg_input {
+            border: 1px solid #ddd;
+            float: left;
+            display: inline;
+            position: relative;
+        }
+        .search_box .com_ipt {
+            position: relative;
+            z-index: 2;
+            height: 14px;
+            padding: 5px 10px;
+            border: none;
+            background: none;
+            line-height: 14px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        .search_box .input_addr {
+            width: 180px;
+        }
+    </style>
+</head>
+<body>
+<div class="search_pop_box" box="searchBox" id="searchAdvBox" style="top: 98px; left: 650.5px; display: block;">
+    <div class="search_box">
+        <!-- basic sel start -->
+        <h4 class="sb_tt clearfix">基本条件 <span class="closeSenSearch tn_fontface"></span></h4>
+        <div class="search_filter">
+            <div id="J_Filter" class="search_adv">
+                <div style="display: block;" class="search_adv_con" id="J_Filters">
+                    <div class="search_adv_item clearfix" id="J_FilterItems">
+                        <dl filter-type="keyword">
+                            <dt class=".search_adv_tit">关键字</dt>
+                            <dd class="search_adv_properties">
+                                <div class="pkg_input">
+                                    <input type="text" code="13" value="请输入目的地、主题或关键词" class="com_ipt input_addr" name="start" style="color: rgb(170, 170, 170);">
+                                </div>
+                            </dd>
+                        </dl><dl filter-type="prdType">
+                        <dt class="search_adv_tit">类型</dt>
+                        <dd class="search_adv_properties">
+                            <div class="search_adv_buxian">
+                                <a class="checked" filter-value="0" href="javascript:;">不限</a>
+                            </div>
+                            <div class="search_adv_others onlyShowOne isShowALl" style="height: auto;">
+                                <a href="javascript:;" filter-value="tours" class=""><i class="icon"></i>跟团游</a>
+                                <a href="javascript:;" filter-value="pkg"><i class="icon"></i>自助游</a>
+                                <a href="javascript:;" filter-value="ticket"><i class="icon"></i>景点门票</a>
+                                <a href="javascript:;" filter-value="around"><i class="icon"></i>当地参团</a>
+                                <a href="javascript:;" filter-value="local"><i class="icon"></i>当地玩乐</a>
+                                <a href="javascript:;" filter-value="cruise"><i class="icon"></i>邮轮</a>
+                                <a href="javascript:;" filter-value="drive"><i class="icon"></i>自驾游</a>
+                                <a href="javascript:;" filter-value="hotel"><i class="icon"></i>酒店</a>
+                            </div>
+                            <div class="search_adv_more" style="display: block;"><span>收起<i class="tn_fontface"></i></span></div>
+                        </dd>
+                    </dl><dl filter-type="tourDay">
+                        <dt class="search_adv_tit">行程天数</dt>
+                        <dd class="search_adv_properties">
+                            <div class="search_adv_buxian">
+                                <a class="checked" filter-value="0" href="javascript:;">不限</a>
+                            </div>
+                            <div class="search_adv_others" style="height: 28px;">
+                                <a href="javascript:;" filter-value="1" class=""><i class="icon"></i>1天</a>
+                                <a href="javascript:;" filter-value="2" class=""><i class="icon"></i>2天</a>
+                                <a href="javascript:;" filter-value="3"><i class="icon"></i>3天</a>
+                                <a href="javascript:;" filter-value="4"><i class="icon"></i>4天</a>
+                                <a href="javascript:;" filter-value="5"><i class="icon"></i>5天</a>
+                                <a href="javascript:;" filter-value="6"><i class="icon"></i>6天</a>
+                                <a href="javascript:;" filter-value="7"><i class="icon"></i>7天</a>
+                                <a href="javascript:;" filter-value="8"><i class="icon"></i>8天</a>
+                                <a href="javascript:;" filter-value="9"><i class="icon"></i>9天</a>
+                                <a href="javascript:;" filter-value="10"><i class="icon"></i>10天</a>
+                                <a href="javascript:;" filter-value="11"><i class="icon"></i>11天</a>
+                                <a href="javascript:;" filter-value="12"><i class="icon"></i>12天</a>
+                                <a href="javascript:;" filter-value="13"><i class="icon"></i>13天</a>
+                                <a href="javascript:;" filter-value="14"><i class="icon"></i>14天</a>
+                                <a href="javascript:;" filter-value="15"><i class="icon"></i>15天</a>
+                                <a href="javascript:;" filter-value="16"><i class="icon"></i>16天</a>
+                                <a href="javascript:;" filter-value="17"><i class="icon"></i>17天</a>
+                                <a href="javascript:;" filter-value="18"><i class="icon"></i>18天</a>
+                                <a href="javascript:;" filter-value="19"><i class="icon"></i>19天</a>
+                                <a href="javascript:;" filter-value="20"><i class="icon"></i>20天</a>
+                                <a href="javascript:;" filter-value="21"><i class="icon"></i>21天</a>
+                                <a href="javascript:;" filter-value="22"><i class="icon"></i>22天</a>
+                                <a href="javascript:;" filter-value="23"><i class="icon"></i>23天</a>
+                                <a href="javascript:;" filter-value="24"><i class="icon"></i>24天</a>
+                                <a href="javascript:;" filter-value="25"><i class="icon"></i>25天</a>
+                                <a href="javascript:;" filter-value="26"><i class="icon"></i>26天</a>
+                                <a href="javascript:;" filter-value="27"><i class="icon"></i>27天</a>
+                                <a href="javascript:;" filter-value="28"><i class="icon"></i>28天</a>
+                                <a href="javascript:;" filter-value="29"><i class="icon"></i>29天</a>
+                                <a href="javascript:;" filter-value="30"><i class="icon"></i>30天</a>
+                                <a href="javascript:;" filter-value="31"><i class="icon"></i>31天</a>
+                                <a href="javascript:;" filter-value="32"><i class="icon"></i>32天</a>
+                                <a href="javascript:;" filter-value="33"><i class="icon"></i>33天</a>
+                                <a href="javascript:;" filter-value="34"><i class="icon"></i>34天</a>
+                                <a href="javascript:;" filter-value="35"><i class="icon"></i>35天</a>
+                                <a href="javascript:;" filter-value="36"><i class="icon"></i>36天</a>
+                                <a href="javascript:;" filter-value="37"><i class="icon"></i>37天</a>
+                                <a href="javascript:;" filter-value="38"><i class="icon"></i>38天</a>
+                                <a href="javascript:;" filter-value="40"><i class="icon"></i>40天</a>
+                                <a href="javascript:;" filter-value="41"><i class="icon"></i>41天</a>
+                                <a href="javascript:;" filter-value="43"><i class="icon"></i>43天</a>
+                                <a href="javascript:;" filter-value="46"><i class="icon"></i>46天</a>
+                                <a href="javascript:;" filter-value="53"><i class="icon"></i>53天</a>
+                                <a href="javascript:;" filter-value="57"><i class="icon"></i>57天</a>
+                                <a href="javascript:;" filter-value="180"><i class="icon"></i>180天</a>
+                                <a href="javascript:;" filter-value="365"><i class="icon"></i>365天</a>
+                                <a href="javascript:;" filter-value="730"><i class="icon"></i>730天</a>
+                            </div>
+                            <div class="search_adv_more" style="display: block;"><span>更多<i class="tn_fontface"></i></span></div>
+                        </dd>
+                    </dl><dl filter-type="price">
+                        <dt class="search_adv_tit">价格区间</dt>
+                        <dd class="search_adv_properties">
+                            <div class="J_FilterCustomPrice search_adv_custom">
+                                <div class="search_adv_custom_inner">
+                <span class="search_adv_input">
+                    <i>¥</i>
+                    <input type="text" name="min" value="">
+                </span>
+                                    <span class="search_adv_sep">-</span>
+                <span class="search_adv_input">
+                    <i>¥</i>
+                    <input type="text" name="max" value="">
+                </span>
+                                    <div class="search_adv_custom_btns">
+                                        <a href="javascript:;" class="J_FilterCustomBtnCls search_adv_custom_cls">清空</a>
+                                        <a href="javascript:;" class="J_FilterCustomBtnOK search_adv_custom_ok">确定</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- basic sel end -->
+        <!-- more sel start -->
+        <div class="moreCondition" style="display: block;">
+            <h4 class="sb_tt mar_top30">更多条件</h4>
+            <div class="search_filter">
+                <div id="J_Filter" class="search_adv">
+                    <div style="display: block;" class="search_adv_con" id="J_Filters">
+                        <div class="search_adv_item clearfix" id="J_FilterItems">
+                            <dl filter-type="play_jiaotongCombination">
+                                <dt class="search_adv_tit">交通类型</dt>
+                                <dd class="search_adv_properties">
+                                    <div class="search_adv_buxian">
+                                        <a class="checked" filter-value="0" href="javascript:;">不限</a>
+                                    </div>
+                                    <div class="search_adv_others" style="height: 28px;">
+                                        <a href="javascript:;" filter-value="495" class=""><i class="icon"></i>汽车往返</a>
+                                        <a href="javascript:;" filter-value="498" class=""><i class="icon"></i>直飞</a>
+                                        <a href="javascript:;" filter-value="494" class=""><i class="icon"></i>火车往返</a>
+                                        <a href="javascript:;" filter-value="499" class=""><i class="icon"></i>转机</a>
+                                        <a href="javascript:;" filter-value="500" class=""><i class="icon"></i>联运</a>
+                                        <a href="javascript:;" filter-value="496"><i class="icon"></i>飞机+火车往返</a>
+                                        <a href="javascript:;" filter-value="1758"><i class="icon"></i>高铁/动车</a>
+                                        <a href="javascript:;" filter-value="1368"><i class="icon"></i>飞机+汽车往返</a>
+                                        <a href="javascript:;" filter-value="493"><i class="icon"></i>飞机往返</a>
+                                    </div>
+                                    <div class="search_adv_more" style="display: block;">
+                                        <span>更多<i class="tn_fontface"></i></span>
+                                    </div>
+                                </dd>
+                            </dl><dl filter-type="play_chanpinCombination">
+                            <dt class="search_adv_tit">产品特色</dt>
+                            <dd class="search_adv_properties">
+                                <div class="search_adv_buxian">
+                                    <a class="checked" filter-value="0" href="javascript:;">不限</a>
+                                </div>
+                                <div class="search_adv_others" style="height: 28px;">
+                                    <a href="javascript:;" filter-value="1536" class=""><i class="icon"></i>纯玩无购物</a>
+                                    <a href="javascript:;" filter-value="2017" class=""><i class="icon"></i>海景房</a>
+                                    <a href="javascript:;" filter-value="2005" class=""><i class="icon"></i>情侣蜜月</a>
+                                    <a href="javascript:;" filter-value="2007" class=""><i class="icon"></i>亲子游</a>
+                                    <a href="javascript:;" filter-value="1530" class=""><i class="icon"></i>免费wifi</a>
+                                    <a href="javascript:;" filter-value="2065"><i class="icon"></i>摄影采风</a>
+                                    <a href="javascript:;" filter-value="2064"><i class="icon"></i>购物血拼</a>
+                                    <a href="javascript:;" filter-value="1779"><i class="icon"></i>中文服务</a>
+                                    <a href="javascript:;" filter-value="2006"><i class="icon"></i>爸妈游</a>
+                                    <a href="javascript:;" filter-value="1812"><i class="icon"></i>无自费</a>
+                                    <a href="javascript:;" filter-value="2035"><i class="icon"></i>海滨/岛屿</a>
+                                    <a href="javascript:;" filter-value="5343"><i class="icon"></i>有自由活动时间</a>
+                                    <a href="javascript:;" filter-value="2216"><i class="icon"></i>一岛一酒店</a>
+                                    <a href="javascript:;" filter-value="4991"><i class="icon"></i>高性价比</a>
+                                    <a href="javascript:;" filter-value="2125"><i class="icon"></i>公园乐园</a>
+                                    <a href="javascript:;" filter-value="2063"><i class="icon"></i>美食</a>
+                                    <a href="javascript:;" filter-value="2070"><i class="icon"></i>游学</a>
+                                    <a href="javascript:;" filter-value="2004"><i class="icon"></i>毕业旅行</a>
+                                    <a href="javascript:;" filter-value="1805"><i class="icon"></i>机场接/送</a>
+                                    <a href="javascript:;" filter-value="2076"><i class="icon"></i>温泉/Spa</a>
+                                    <a href="javascript:;" filter-value="2036"><i class="icon"></i>湖光山色</a>
+                                    <a href="javascript:;" filter-value="2052"><i class="icon"></i>民俗风情</a>
+                                    <a href="javascript:;" filter-value="1512"><i class="icon"></i>新航假期</a>
+                                    <a href="javascript:;" filter-value="2054"><i class="icon"></i>宗教祈福</a>
+                                    <a href="javascript:;" filter-value="2040"><i class="icon"></i>踏青赏花</a>
+                                    <a href="javascript:;" filter-value="2108"><i class="icon"></i>潜水</a>
+                                    <a href="javascript:;" filter-value="1109"><i class="icon"></i>免税店</a>
+                                    <a href="javascript:;" filter-value="2066"><i class="icon"></i>婚纱摄影</a>
+                                    <a href="javascript:;" filter-value="2037"><i class="icon"></i>自然遗产/景区</a>
+                                    <a href="javascript:;" filter-value="2053"><i class="icon"></i>古迹遗址</a>
+                                    <a href="javascript:;" filter-value="2051"><i class="icon"></i>古镇水乡</a>
+                                    <a href="javascript:;" filter-value="2107"><i class="icon"></i>漂流</a>
+                                    <a href="javascript:;" filter-value="2042"><i class="icon"></i>赏枫</a>
+                                    <a href="javascript:;" filter-value="2038"><i class="icon"></i>戈壁沙漠</a>
+                                    <a href="javascript:;" filter-value="2675"><i class="icon"></i>租车自驾</a>
+                                    <a href="javascript:;" filter-value="2067"><i class="icon"></i>旅游婚礼</a>
+                                    <a href="javascript:;" filter-value="2127"><i class="icon"></i>农家采摘</a>
+                                    <a href="javascript:;" filter-value="4132"><i class="icon"></i>明星同款</a>
+                                    <a href="javascript:;" filter-value="637"><i class="icon"></i>潜水圣地</a>
+                                    <a href="javascript:;" filter-value="648"><i class="icon"></i>摄影采风</a>
+                                    <a href="javascript:;" filter-value="649"><i class="icon"></i>毕业旅行</a>
+                                    <a href="javascript:;" filter-value="652"><i class="icon"></i>亲子</a>
+                                    <a href="javascript:;" filter-value="655"><i class="icon"></i>民俗风情</a>
+                                    <a href="javascript:;" filter-value="656"><i class="icon"></i>古镇村落</a>
+                                </div>
+                                <div class="search_adv_more" style="display: block;">
+                                    <span>更多<i class="tn_fontface"></i></span>
+                                </div>
+                            </dd>
+                        </dl><dl filter-type="play_zutuanCombination">
+                            <dt class="search_adv_tit">组团特色</dt>
+                            <dd class="search_adv_properties">
+                                <div class="search_adv_buxian">
+                                    <a class="checked" filter-value="0" href="javascript:;">不限</a>
+                                </div>
+                                <div class="search_adv_others" style="height: 28px;">
+                                    <a href="javascript:;" filter-value="1543"><i class="icon"></i>铁定成团</a>
+                                    <a href="javascript:;" filter-value="2224"><i class="icon"></i>天天发团</a>
+                                    <a href="javascript:;" filter-value="490"><i class="icon"></i>私家团（1单1团）</a>
+                                    <a href="javascript:;" filter-value="1954"><i class="icon"></i>循环团</a>
+                                    <a href="javascript:;" filter-value="1803"><i class="icon"></i>途牛独立团</a>
+                                    <a href="javascript:;" filter-value="489"><i class="icon"></i>小团出游(10人左右)</a>
+                                    <a href="javascript:;" filter-value="2223"><i class="icon"></i>目的地成团</a>
+                                </div>
+                                <div class="search_adv_more" style="display: block;">
+                                    <span>更多<i class="tn_fontface"></i></span>
+                                </div>
+                            </dd>
+                        </dl><dl filter-type="play_zhusuCombination">
+                            <dt class="search_adv_tit">住宿类型</dt>
+                            <dd class="search_adv_properties">
+                                <div class="search_adv_buxian">
+                                    <a class="" filter-value="0" href="javascript:;">不限</a>
+                                </div>
+                                <div class="search_adv_others" style="height: 28px;">
+                                    <a href="javascript:;" filter-value="507" class="checked"><i class="icon"></i>舒适</a>
+                                    <a href="javascript:;" filter-value="511"><i class="icon"></i>别墅</a>
+                                    <a href="javascript:;" filter-value="516"><i class="icon"></i>旅馆客栈</a>
+                                    <a href="javascript:;" filter-value="517"><i class="icon"></i>公寓式酒店</a>
+                                    <a href="javascript:;" filter-value="518"><i class="icon"></i>青年旅舍</a>
+                                    <a href="javascript:;" filter-value="570"><i class="icon"></i>凯悦</a>
+                                    <a href="javascript:;" filter-value="667"><i class="icon"></i>农家乐</a>
+                                    <a href="javascript:;" filter-value="668"><i class="icon"></i>帐篷</a>
+                                    <a href="javascript:;" filter-value="1540"><i class="icon"></i>含国际五星</a>
+                                    <a href="javascript:;" filter-value="1542"><i class="icon"></i>特色住宿</a>
+                                    <a href="javascript:;" filter-value="1958"><i class="icon"></i>双酒店体验</a>
+                                    <a href="javascript:;" filter-value="1959"><i class="icon"></i>多酒店体验</a>
+                                    <a href="javascript:;" filter-value="2008"><i class="icon"></i>三星级/舒适</a>
+                                    <a href="javascript:;" filter-value="2009"><i class="icon"></i>四星级/高档</a>
+                                    <a href="javascript:;" filter-value="2010"><i class="icon"></i>五星级/豪华</a>
+                                    <a href="javascript:;" filter-value="2011"><i class="icon"></i>全程国际五星</a>
+                                    <a href="javascript:;" filter-value="2012"><i class="icon"></i>六星级/奢华</a>
+                                    <a href="javascript:;" filter-value="2013"><i class="icon"></i>七星级及以上</a>
+                                    <a href="javascript:;" filter-value="2014"><i class="icon"></i>二星级及以下/经济</a>
+                                    <a href="javascript:;" filter-value="2017"><i class="icon"></i>海景房</a>
+                                    <a href="javascript:;" filter-value="2020"><i class="icon"></i>塞班海景酒店（OV）</a>
+                                    <a href="javascript:;" filter-value="2022"><i class="icon"></i>珊瑚海洋酒店（COP）</a>
+                                    <a href="javascript:;" filter-value="2024"><i class="icon"></i>哈发黛水晶楼</a>
+                                    <a href="javascript:;" filter-value="2029"><i class="icon"></i>玛丽安娜酒店</a>
+                                    <a href="javascript:;" filter-value="2030"><i class="icon"></i>世界酒店</a>
+                                    <a href="javascript:;" filter-value="2031"><i class="icon"></i>清泉酒店</a>
+                                </div>
+                                <div class="search_adv_more" style="display: block;">
+                                    <span>更多<i class="tn_fontface"></i></span>
+                                </div>
+                            </dd>
+                        </dl><dl filter-type="play_jiudianSCombination">
+                            <dt class="search_adv_tit">酒店品牌</dt>
+                            <dd class="search_adv_properties">
+                                <div class="search_adv_buxian">
+                                    <a class="checked" filter-value="0" href="javascript:;">不限</a>
+                                </div>
+                                <div class="search_adv_others" style="height: 28px;">
+                                    <a href="javascript:;" filter-value="572"><i class="icon"></i>喜来登</a>
+                                    <a href="javascript:;" filter-value="569"><i class="icon"></i>希尔顿</a>
+                                    <a href="javascript:;" filter-value="584"><i class="icon"></i>洲际</a>
+                                    <a href="javascript:;" filter-value="599"><i class="icon"></i>豪生</a>
+                                    <a href="javascript:;" filter-value="573"><i class="icon"></i>万豪</a>
+                                    <a href="javascript:;" filter-value="601"><i class="icon"></i>凯宾斯基</a>
+                                    <a href="javascript:;" filter-value="603"><i class="icon"></i>悦榕集团Banyan Tree</a>
+                                    <a href="javascript:;" filter-value="570"><i class="icon"></i>凯悦</a>
+                                    <a href="javascript:;" filter-value="2028"><i class="icon"></i>悦泰酒店</a>
+                                    <a href="javascript:;" filter-value="587"><i class="icon"></i>香格里拉酒店</a>
+                                    <a href="javascript:;" filter-value="602"><i class="icon"></i>铂尔曼</a>
+                                    <a href="javascript:;" filter-value="598"><i class="icon"></i>美高梅度假酒店</a>
+                                    <a href="javascript:;" filter-value="596"><i class="icon"></i>丽思卡尔顿酒店</a>
+                                    <a href="javascript:;" filter-value="597"><i class="icon"></i>维景</a>
+                                    <a href="javascript:;" filter-value="600"><i class="icon"></i>银泰</a>
+                                    <a href="javascript:;" filter-value="590"><i class="icon"></i>诺富特酒店</a>
+                                    <a href="javascript:;" filter-value="604"><i class="icon"></i>皇冠</a>
+                                    <a href="javascript:;" filter-value="607"><i class="icon"></i>阿达兰集团Adaaran</a>
+                                    <a href="javascript:;" filter-value="605"><i class="icon"></i>花间堂</a>
+                                    <a href="javascript:;" filter-value="1851"><i class="icon"></i>BC集团</a>
+                                    <a href="javascript:;" filter-value="2024"><i class="icon"></i>哈发黛水晶楼</a>
+                                    <a href="javascript:;" filter-value="2023"><i class="icon"></i>哈发黛主楼</a>
+                                    <a href="javascript:;" filter-value="615"><i class="icon"></i>假日酒店集团Holiday Inn</a>
+                                    <a href="javascript:;" filter-value="2026"><i class="icon"></i>卡诺亚主楼</a>
+                                    <a href="javascript:;" filter-value="606"><i class="icon"></i>温德姆</a>
+                                    <a href="javascript:;" filter-value="1265"><i class="icon"></i>莱佛士</a>
+                                    <a href="javascript:;" filter-value="1850"><i class="icon"></i>SUN集团</a>
+                                    <a href="javascript:;" filter-value="576"><i class="icon"></i>华美达</a>
+                                    <a href="javascript:;" filter-value="586"><i class="icon"></i>四季</a>
+                                    <a href="javascript:;" filter-value="1261"><i class="icon"></i>椰子黑鹦鹉酒店</a>
+                                    <a href="javascript:;" filter-value="2027"><i class="icon"></i>卡诺亚高楼</a>
+                                    <a href="javascript:;" filter-value="611"><i class="icon"></i>森塔拉集团Centara</a>
+                                    <a href="javascript:;" filter-value="2020"><i class="icon"></i>塞班海景酒店（OV）</a>
+                                    <a href="javascript:;" filter-value="2025"><i class="icon"></i>哈发黛塔加楼（TAGA）</a>
+                                    <a href="javascript:;" filter-value="578"><i class="icon"></i>卓美亚集团</a>
+                                    <a href="javascript:;" filter-value="580"><i class="icon"></i>安娜塔拉集团</a>
+                                    <a href="javascript:;" filter-value="612"><i class="icon"></i>环球集团Universal</a>
+                                    <a href="javascript:;" filter-value="897"><i class="icon"></i>昂格利</a>
+                                    <a href="javascript:;" filter-value="1227"><i class="icon"></i>柏嘉亚布法隆</a>
+                                    <a href="javascript:;" filter-value="1816"><i class="icon"></i>红树林度假世界</a>
+                                    <a href="javascript:;" filter-value="571"><i class="icon"></i>戴斯</a>
+                                    <a href="javascript:;" filter-value="574"><i class="icon"></i>迪斯尼奥兰多度假酒店</a>
+                                    <a href="javascript:;" filter-value="575"><i class="icon"></i>Fairmont酒店</a>
+                                    <a href="javascript:;" filter-value="613"><i class="icon"></i>地中海俱乐部集团Club Med</a>
+                                    <a href="javascript:;" filter-value="691"><i class="icon"></i>雅高酒店</a>
+                                    <a href="javascript:;" filter-value="581"><i class="icon"></i>泰姬集团</a>
+                                    <a href="javascript:;" filter-value="608"><i class="icon"></i>艾登尼兹集团Aydeniz</a>
+                                    <a href="javascript:;" filter-value="609"><i class="icon"></i>查亚集团Chaaya</a>
+                                    <a href="javascript:;" filter-value="616"><i class="icon"></i>椰林精选集团Coco Collection</a>
+                                    <a href="javascript:;" filter-value="617"><i class="icon"></i>都喜集团Dusit</a>
+                                    <a href="javascript:;" filter-value="624"><i class="icon"></i>太阳旅游集团Sun Travel</a>
+                                    <a href="javascript:;" filter-value="621"><i class="icon"></i>贝安琪集团Per Aquum</a>
+                                    <a href="javascript:;" filter-value="1236"><i class="icon"></i>悦榕庄</a>
+                                    <a href="javascript:;" filter-value="1180"><i class="icon"></i>Mana度假村</a>
+                                    <a href="javascript:;" filter-value="585"><i class="icon"></i>索菲特</a>
+                                    <a href="javascript:;" filter-value="614"><i class="icon"></i>康斯丹集团Constance</a>
+                                    <a href="javascript:;" filter-value="1210"><i class="icon"></i>Yasawa度假村</a>
+                                    <a href="javascript:;" filter-value="5085"><i class="icon"></i>哈曼</a>
+                                    <a href="javascript:;" filter-value="619"><i class="icon"></i>力士集团Lux*</a>
+                                    <a href="javascript:;" filter-value="1181"><i class="icon"></i>Matamanoa度假村</a>
+                                    <a href="javascript:;" filter-value="1209"><i class="icon"></i>Namale度假村</a>
+                                    <a href="javascript:;" filter-value="1387"><i class="icon"></i>LUX</a>
+                                    <a href="javascript:;" filter-value="610"><i class="icon"></i>维拉集团Villa</a>
+                                    <a href="javascript:;" filter-value="1021"><i class="icon"></i>喜达屋集团</a>
+                                    <a href="javascript:;" filter-value="1262"><i class="icon"></i>天堂阳光酒店</a>
+                                    <a href="javascript:;" filter-value="1388"><i class="icon"></i>英迪格</a>
+                                    <a href="javascript:;" filter-value="1852"><i class="icon"></i>LUX集团</a>
+                                    <a href="javascript:;" filter-value="579"><i class="icon"></i>唯一集团</a>
+                                    <a href="javascript:;" filter-value="1198"><i class="icon"></i>Lomani度假村</a>
+                                    <a href="javascript:;" filter-value="1204"><i class="icon"></i>Tokoriki度假村</a>
+                                    <a href="javascript:;" filter-value="1269"><i class="icon"></i>拉布瑞思希尔顿</a>
+                                    <a href="javascript:;" filter-value="1563"><i class="icon"></i>萨沃伊水疗度假村</a>
+                                    <a href="javascript:;" filter-value="1853"><i class="icon"></i>Constance集团</a>
+                                    <a href="javascript:;" filter-value="895"><i class="icon"></i>3A</a>
+                                    <a href="javascript:;" filter-value="1234"><i class="icon"></i>霍斯诺尔摩希尔顿</a>
+                                    <a href="javascript:;" filter-value="1835"><i class="icon"></i>亚龙湾天域度假酒店</a>
+                                    <a href="javascript:;" filter-value="5086"><i class="icon"></i>君锦滨海</a>
+                                    <a href="javascript:;" filter-value="896"><i class="icon"></i>莉莉</a>
+                                    <a href="javascript:;" filter-value="1174"><i class="icon"></i>Novotel诺夫特</a>
+                                    <a href="javascript:;" filter-value="1211"><i class="icon"></i>Tardai天堂之爱度假村</a>
+                                    <a href="javascript:;" filter-value="1824"><i class="icon"></i>三亚大小洞天小月湾度假酒店</a>
+                                    <a href="javascript:;" filter-value="5091"><i class="icon"></i>京韵</a>
+                                    <a href="javascript:;" filter-value="583"><i class="icon"></i>七星帆船酒店</a>
+                                    <a href="javascript:;" filter-value="589"><i class="icon"></i>美居酒店</a>
+                                    <a href="javascript:;" filter-value="618"><i class="icon"></i>第六感集团Six Senses</a>
+                                    <a href="javascript:;" filter-value="622"><i class="icon"></i>立鼎世集团</a>
+                                    <a href="javascript:;" filter-value="669"><i class="icon"></i>瑞吉</a>
+                                    <a href="javascript:;" filter-value="673"><i class="icon"></i>海逸酒店</a>
+                                    <a href="javascript:;" filter-value="899"><i class="icon"></i>依迪尔</a>
+                                    <a href="javascript:;" filter-value="1199"><i class="icon"></i>Treasure金银岛度假村</a>
+                                    <a href="javascript:;" filter-value="1201"><i class="icon"></i>Koro Sun度假村</a>
+                                    <a href="javascript:;" filter-value="1235"><i class="icon"></i>康斯坦斯-艾菲利亚</a>
+                                    <a href="javascript:;" filter-value="1988"><i class="icon"></i>Mercure美居</a>
+                                    <a href="javascript:;" filter-value="591"><i class="icon"></i>君悦酒店</a>
+                                    <a href="javascript:;" filter-value="593"><i class="icon"></i>元明酒店</a>
+                                    <a href="javascript:;" filter-value="595"><i class="icon"></i>丝绸麦哲伦酒店</a>
+                                    <a href="javascript:;" filter-value="677"><i class="icon"></i>半岛酒店</a>
+                                    <a href="javascript:;" filter-value="901"><i class="icon"></i>科莫</a>
+                                    <a href="javascript:;" filter-value="1205"><i class="icon"></i>Malolo度假村</a>
+                                    <a href="javascript:;" filter-value="1257"><i class="icon"></i>柏嘉亚</a>
+                                </div>
+                                <div class="search_adv_more" style="display: block;">
+                                    <span>更多<i class="tn_fontface"></i></span>
+                                </div>
+                            </dd>
+                        </dl><dl filter-type="play_hancanCombination">
+                            <dt class="search_adv_tit">含餐</dt>
+                            <dd class="search_adv_properties">
+                                <div class="search_adv_buxian">
+                                    <a class="checked" filter-value="0" href="javascript:;">不限</a>
+                                </div>
+                                <div class="search_adv_others" style="height: auto;">
+                                    <a href="javascript:;" filter-value="706"><i class="icon"></i>早餐</a>
+                                    <a href="javascript:;" filter-value="705"><i class="icon"></i>早晚餐</a>
+                                    <a href="javascript:;" filter-value="703"><i class="icon"></i>一价全含</a>
+                                    <a href="javascript:;" filter-value="704"><i class="icon"></i>早中晚餐</a>
+                                </div>
+                                <div class="search_adv_more">
+                                    <span>更多<i class="tn_fontface"></i></span>
+                                </div>
+                            </dd>
+                        </dl>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- more sel end -->
+        <div class="showallbtn_box">
+            <div class="showallbtn_s">
+                <a class="" href="javascript:void(0);">收起更多 <em class="tn_fontface"></em></a>
+            </div>
+        </div>
+        <div class="commit_btn">
+            <input type="button" value="搜索" class="com_btn" onclick="searchAjax.advanceSearch(this);">
+            <a onclick="search_input.clearSearchLens(this);" href="javascript:;">清空搜索条件</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

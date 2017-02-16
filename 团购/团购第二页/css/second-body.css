@@ -1,0 +1,417 @@
+
+.second-body{
+    height: 527px;
+    /*background: #ccc;*/
+    padding-top: 40px;
+}
+
+.second-body .second-body-h{
+    height: 35px;
+    /*background: #aaa;*/
+    position: relative;
+    border-bottom: 2px solid #a8d1a5;
+}
+
+.second-body .second-body-h i{
+    position: absolute;
+    height: 19px;
+    width: 8px;
+    top: 10px;
+    background: url("../images/gticon.png") 0 -76px;
+}
+.second-body .second-body-h h3{
+    float: left;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: bold;
+    font-family: "microsoft yahei";
+    margin-left: 16px;
+}
+
+.second-body .second-body-h ul{
+    float: left;
+    margin-left: 154px;
+    height: 22px;
+    line-height: 22px;
+    padding-top: 5px;
+    font-family: "microsoft yahei";
+    color:#000;
+}
+
+.second-body .second-body-h ul li{
+    float: left;
+    margin-right: 10px;
+}
+.second-body .second-body-h ul li a{
+    display: block;
+    padding: 0 10px;
+    margin-top: 0;
+}
+.second-body .second-body-h ul li.current a{
+    background: #90CBED;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    margin-top: 0;
+}
+
+
+.second-body .second-body-h a{
+    float: right;
+    margin-top: 12px;
+    font-family: "microsoft yahei";
+}
+.second-body .second-body-h a:hover{
+    color:#ff8800;
+}
+
+.second-body .second-body-b{
+    height: 490px;
+    /*background: #ddd;*/
+}
+
+.second-body .second-body-b div.normal{
+    display: none;
+    height: 490px;
+}
+
+.second-body .second-body-b div.current{
+    display: block;
+}
+.second-body .second-body-b .second-body-b-l{
+    width: 200px;
+    height: 490px;
+    float: left;
+    background: url("../images/changxian.png") -20px 0;
+    font-family: "microsoft yahei";
+
+}
+
+.second-body .second-body-b .second-body-b-l ul{
+    /*position: relative;*/
+    width: 160px;
+    padding: 20px;
+}
+ .second-body-b-l ul li{
+     position: relative;
+     height: 35px;
+     line-height: 35px;
+     margin-bottom: 10px;
+ }
+.second-body-b-l ul li a{
+    display: block;
+    background: #f4fafe;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 10px;
+}
+.second-body-b-l ul li a:hover{
+    color: #000;
+}
+.second-body-b-l ul li a span{
+    position: relative;
+    padding-left: 14px;
+    float: right;
+}
+.second-body-b-l ul li a span i{
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 10px;
+    background: url("../images/gticon.png") -194px -499px;
+    top: 12px;
+    left: 0px;
+}
+.second-body .second-body-b .second-body-b-r{
+    float: left;
+    width: 990px;
+    height: 490px;
+    /*background: blue;*/
+}
+
+.second-body-b .second-body-b-r .item{
+    box-shadow: 0px 0px 5px #ccc;
+    float: left;
+    width: 220px;
+    height: 215px;
+    margin: 20px 0 0 20px;
+    /*background: #ccc;*/
+    font-family: "microsoft yahei";
+
+}
+
+.second-body-b .second-body-b-r .item img{
+    width: 220px;
+}
+
+.second-body-b-r .item .item-h{
+    position: relative;
+    height: 125px;
+    width: 220px;
+    background: green;
+    background: #000;
+    overflow: hidden;
+}
+
+
+.second-body-b-r .item .item-h span{
+    display: none;
+    position: absolute;
+    height: 85px;
+    width: 180px;
+    background-color: rgba(0,0,0,0.6);
+    left: 0;
+    top: 0;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.second-body-b-r .item p.price{
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    color:#ff8800;
+}
+
+.second-body-b-r .item p.price i{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "microsoft yahei";
+    /*color:#ff8800;*/
+}
+
+.second-body-b-r .item p.price em{
+    float: right;
+}
+
+.second-body-b-r .item p.price s{
+    color: #999;
+}
+
+.second-body-b-r .item p.rec{
+    padding: 0 16px;
+    color: #404040;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+
+
+.dy .second-body-b .second-body-b-l{
+    background: url("../images/changxian1.png");
+}
+.nty .second-body-b .second-body-b-l{
+    background: url("../images/changxian2.png");
+}
+.wty .second-body-b .second-body-b-l{
+    background: url("../images/changxian3.png");
+}
+
+.dy .second-body-h ul li.current a{
+    background: #a8d1a5;
+}
+.nty .second-body-h ul li.current a{
+    background: #e694a6;
+}
+.wty .second-body-h ul li.current a{
+    background: #85cecf;
+}
+
+.dy .second-body-h i{
+    background:url("../images/gticon.png") no-repeat 0 -106px;
+}
+.nty .second-body-h i{
+    background:url("../images/gticon.png") no-repeat 0 -45px;
+}
+.wty .second-body-h i{
+    background:url("../images/gticon.png") no-repeat 0 -136px;
+}
+
+/*好待start*/
+.second-strategy{
+    height: 356px;
+    /*background: #ccc;*/
+    margin-top: 26px;
+}
+
+.second-strategy h3{
+    position: relative;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: bold;
+    font-family: "microsoft yahei";
+    padding-left: 16px;
+    border-bottom: 2px solid #666;
+}
+.second-strategy h3 i{
+    position: absolute;
+    height: 19px;
+    width: 8px;
+    background: url("../images/gticon.png") no-repeat 0 -207px;
+    top:8px;
+    left: 0px;
+}
+
+.second-strategy-b{
+    height: 320px;
+    width:1190px;
+    margin-left: -1px;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+}
+
+.second-strategy-left{
+    height: 320px;
+    width: 200px;
+    background: blue;
+    float: left;
+}
+
+.second-strategy-right{
+    height: 280px;
+    width: 956px;
+    /*background: #ddd;*/
+    float: right;
+    padding: 20px 0;
+}
+
+.second-strategy-right .ssr-info{
+    height: 280px;
+    width: 210px;
+    background: #f7f7f7;
+    margin-right: 29px;
+    float: left;
+    box-shadow: 0 0 4px #ccc;
+}
+.ssr-info-top{
+    height: 187px;
+}
+
+.ssr-info-bottom{
+    padding: 4px 15px 0 15px;
+}
+
+.ssr-info-bottom .gj{
+    line-height: 27px;
+    font-weight: bold;
+}
+.ssr-info-bottom .gk{
+    line-height: 20px;
+}
+/*好待end*/
+
+/*hot start*/
+.second-hot{
+    margin-top: 21px;
+    height: 277px;
+    /*background: #ccc;*/
+    margin-bottom:300px;
+}
+
+.second-hot h3{
+    position: relative;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: bold;
+    font-family: "microsoft yahei";
+    padding-left: 16px;
+    border-bottom: 2px solid #666;
+}
+.second-hot h3 i{
+    position: absolute;
+    height: 19px;
+    width: 8px;
+    background: url("../images/gticon.png") no-repeat 0 -173px;
+    top:8px;
+    left: 0px;
+}
+.second-hot-bottom{
+    height: 240px;
+    background: #f5f5f5;
+}
+.second-hot-left{
+    height: 200px;
+    width: 660px;
+    /*background: #ddd;*/
+    padding: 20px 0;
+    float: left;
+    /*background: #f5f5f5;*/
+}
+.hot-left-item{
+    height: 200px;
+    width: 200px;
+    /*background: blue;*/
+    margin-left: 20px;
+    float: left;
+    background: #f5f5f5;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.hot-left-item p.price{
+    padding: 0 15px;
+    height: 36px;
+    line-height: 36px;
+    color:#ff8800;
+}
+.hot-left-item p.price span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.hot-left-item p.price i{
+    float: right;
+}
+.hot-left-item p.price em{
+    color: #999999;
+}
+.hot-left-item p.inf{
+    padding: 0 15px;
+    font-weight: bold;
+}
+.second-hot-right{
+    height: 220px;
+    width: 490px;
+    padding: 20px 20px 0 0;
+    /*background: red;*/
+    float: right;
+    /*background: #f5f5f5;*/
+}
+.hot-right-item{
+    height: 90px;
+    width: 490px;
+    background: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.hrt-right{
+    float: right;
+    height: 90px;
+    width: 290px;
+    padding:0 20px;
+}
+
+.hrt-right p.price{
+    padding: 0 15px;
+    height: 36px;
+    line-height: 36px;
+    color:#ff8800;
+}
+.hrt-right p.price span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.hrt-right p.price i{
+    float: right;
+}
+.hrt-right p.price em{
+    color: #999999;
+}
+.hrt-right p.inf{
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+/*hot end*/

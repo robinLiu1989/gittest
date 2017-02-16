@@ -1,0 +1,277 @@
+.layer1{
+    width: 950px;
+    height: 235px;
+}
+.layer1_header{
+    height: 32px;
+    border-bottom: 3px solid #eceef4;
+    position: relative;
+    font-family: "microsoft yahei";
+    margin-bottom: 15px;
+}
+.layer1 .layer1_header h2{
+    font-size: 18px;
+    font-weight:bold;
+    width: 240px;
+    height: 32px;
+    line-height: 32px;
+    float:left;
+    padding-left:10px;
+    color:#333;
+}
+.layer1_header .tabs1 {
+    float: left;
+    font-size: 14px;
+    color: #666;
+}
+.layer1_header .tabs1 li{
+    float:left;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    margin-right: 18px;
+}
+.layer1_header .tabs1 li:hover{
+    border-bottom:3px solid #BF7342;
+}
+.layer1_header .tabs1 li:hover a{
+    color:#BF7342;
+}
+.tabs1 li a{
+    color: #222;
+    font-size: 15px;
+}
+.layer1_header .more{
+    float:right;
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    color:#999;
+}
+.content1 .layer1_body{
+    height: 185px;
+}
+.layer1_body .body_left{
+    float: left;
+    width: 225px;
+    height: 178px;
+    position: relative;
+}
+.layer1_body .city{
+     border-bottom: 1px dotted #d7d7d7;
+     padding-left: 10px;
+     padding-bottom: 5px;
+     margin-bottom: 10px;
+     margin-right: 10px;
+}
+.layer1_body .city li{
+    float: left;
+    padding-left: 7px;
+    width: 94px;
+    margin-bottom: 5px;
+}
+.layer1_body .body_right {
+    width: 725px;
+    height: 185px;
+    float:right;
+    overflow: hidden;
+    position: relative;
+}
+.body_right .tab_list {
+    width: 780px;
+    float: left;
+    display: none;
+}
+.layer1_body .body_right .show{
+    display: block;
+}
+.body_right .tab_list .item{
+    float: left;
+    position: relative;
+    display: inline;
+    width: 225px;
+    height: 165px;
+    background: #fff;
+    padding-bottom: 5px;
+    margin: 0 2px 20px 15px;
+}
+.body_right .tab_list .pro_pic{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5px;
+    width: 225px;
+    height: 127px;
+}
+.item .pro_pic img {
+    width: 225px;
+    height: 127px;
+}
+.pro_pic .mess_bg{
+    height: 40px;
+    width: 225px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: #38414c;
+    opacity: 0.75;
+}
+.pro_pic .mess{
+    height: 38px;
+    position: absolute;
+    left: 5px;
+    bottom: 0px;
+    overflow: hidden;
+}
+.pro_pic .mess a{
+    color: #fff;
+    width: 217px;
+    height: 42px;
+    display: block;
+    line-height: 18px;
+    overflow: hidden;
+}
+.item .info{
+    line-height: 26px;
+}
+.item .info .price{
+    float: left;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.item .info .price i {
+    font-size: 12px;
+    font-style: normal;
+    color: #f60;
+}
+.info .price em {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: arial;
+    margin-left: -3px;
+    color: #f60;
+}
+.item .infor .price s {
+    color: #999;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+.info .manyi {
+    float: right;
+    color: #999;
+    display: inline;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+    padding: 0;
+}
+
+
+/*游记攻略部分*/
+.tour_box{
+    position: relative;
+    width: 950px;
+    height: 420px;
+    /*overflow: hidden;*/
+}
+.tour_box .tour_title {
+    border-bottom: 3px solid #eceef4;
+    padding-bottom: 5px;
+    position: relative;
+    width: 950px;
+    overflow: hidden;
+}
+.tour_title .left_part{
+    float: left;
+    width: 195px;
+    /*padding-left: 5px;*/
+    font: bold 18px/20px "Microsoft Yahei";
+    font-family: "Hiragino Sans GB","Microsoft Yahei";
+    color: #404040;
+}
+.tour_title .left_part h2{
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.tour_title .right_part{
+    float: right;
+    text-align: right;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+.tour_header{
+    height: 32px;
+    position: relative;
+    font-family: "microsoft yahei";
+    margin: 15px 0px 10px 0;
+    width: 950px;
+}
+.tour_header .tabs1{
+    font-size: 14px;
+    color: #666;
+}
+.tour_header .tabs1 li{
+    float: left;height: 32px;
+    line-height: 32px;
+    text-align: center;
+    padding: 0 10px;
+    margin-right: 15px;
+}
+.tour_header .tabs1 li:hover {
+    background: #2e9900;
+}
+.tour_header .tabs1 li:hover a {
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+}
+.tour_header .more{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    color: #999;
+}
+.tour_body{
+    width: 950px;
+    height: 350px;
+    /*background-color: green;*/
+    position: relative;
+    display: none;
+}
+.tour_box .show{
+    display: block;
+}
+.tour_body .body_list{
+    position: absolute;
+}
+.tour_body .body_left{
+    width: 225px;
+    height: 320px;
+    float: left;
+    /*overflow:hidden;*/
+}
+.tour_body .body_middle{
+    width: 480px;
+    padding-left: 15px;
+    float: left;
+}
+.tour_body .body_middle li {
+    width: 225px;
+    height: 152px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    float: left;
+}
+
+.tour_body .body_middle img{
+    height: 152px;
+    width: 225px;
+}
+.tour_body .body_right{
+    float: right;
+}
